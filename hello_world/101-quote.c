@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- *main - puts function
+ *main - write function
  *Return: 1 if correct
  */
 int main(void)
