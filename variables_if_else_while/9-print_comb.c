@@ -10,16 +10,16 @@ int main(void)
 
 	for (; ch < 58; ch++)
 	{
-		if (ch == 48)
+	putchar(ch);
+		if (ch == 57)
 		{
-		putchar(ch);
+		putchar('\n');
 		}
 		else
 		{
 		putchar(32);
 		putchar(44);
-		putchar(ch);
-		}	
+		}
 	}
 	return (0);
 }
