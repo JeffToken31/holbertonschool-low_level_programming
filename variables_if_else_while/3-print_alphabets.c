@@ -13,7 +13,7 @@ int main(void)
 	{
 	putchar(minchar);
 	}
-	
+
 	for (; maxchar < 91; maxchar++)
 	{
 	putchar(maxchar);
