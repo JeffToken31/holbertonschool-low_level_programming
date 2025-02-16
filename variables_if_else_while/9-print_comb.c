@@ -10,7 +10,7 @@ int main(void)
 
 	for (; ch < 58; ch++)
 	{
-		if (ch == 57)
+		if (ch == 58)
 		{
 		putchar(ch);
 		}
