@@ -18,6 +18,6 @@ int main(void)
 	{
 	putchar(maxchar);
 	}
-	putchar(36);
+	putchar('\n');
 	return (0);
 }
