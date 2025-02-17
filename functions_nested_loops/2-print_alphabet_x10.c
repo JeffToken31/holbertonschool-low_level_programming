@@ -5,7 +5,7 @@
  *
  *Return: (0) if correct
  */
-int print_alphabet_x10(void)
+void print_alphabet_x10(void)
 {
 	int  nbra;
 	int lsa;
@@ -19,5 +19,5 @@ int print_alphabet_x10(void)
 		}
 	_putchar('\n');
 	}
-	return (0);
+	return;
 }
