@@ -1,4 +1,5 @@
-#ifndef _PUTCHAR_H
-#define _PTCHAR_H
+#ifndef _PRINT_ALPHABET_H
+#define _PRINT_ALPHABET_H
 int _putchar(char c);
+void print_alphabet(void);
 #endif
