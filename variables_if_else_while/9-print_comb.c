@@ -11,14 +11,14 @@ int main(void)
 	for (; ch < 58; ch++)
 	{
 	putchar(ch);
-		if (ch == 57)
-		{
-		putchar('\n');
-		}
-		else
+		if (ch != 57)
 		{
 		putchar(32);
 		putchar(44);
+		}
+		else
+		{
+		putchar('\n');
 		}
 	}
 	return (0);
