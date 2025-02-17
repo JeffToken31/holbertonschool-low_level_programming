@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- *_islower - to check if islowercase
- *
- *Return: (0) if false 
- */
+*_islower - is to check if islowercase
+*@c: arg type int
+*Return:1 is true
+*/
 int _islower(int c)
 {
-	if(c >= 97 && c < 123)
+	if (c >= 97 && c < 123)
 		return (1);
 	else
 		return (0);
