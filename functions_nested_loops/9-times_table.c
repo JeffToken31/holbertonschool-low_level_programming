@@ -17,16 +17,17 @@ void times_table(void)
 		{
 			int result = table * multiple;
 
-			if (result >= 10)
+			if (result >= 10 && multiple > 0 )
 			{
-			_putchar(result / 10 + '0');
+				_putchar(result / 10 + '0');
+				_putchar(result % 10 + '0');
+				_putchar(',');
 			}
-			_putchar(result % 10 + '0');
-			if (multiple != 9)
+			else
 			{
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
+				_putchar(' ');
+				_putchar(result % 10 + '0');
+				_putchar(',');
 			}
 		}
 		_putchar('\n');
