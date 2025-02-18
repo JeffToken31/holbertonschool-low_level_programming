@@ -17,9 +17,12 @@ void times_table(void)
 		{
 			_putchar((table * multiple) / 10 + '0');
 			_putchar((table * multiple) % 10 + '0');
+			if (multiple != 9)
+			{
 			_putchar(',');
 			_putchar(' ');
 			_putchar(' ');
+			}
 		}
 		_putchar('\n');
 		table++;
