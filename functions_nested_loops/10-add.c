@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- *int add - is to list all minutes in a day
+ *add - is to addition two integer
  *@a: type int
+ *@b: type int
  *Return: a + b
  */
 int add(int a, int b)
 {
-	return (a + b);	
-
+	return (a + b);
 }
