@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *jack_bauer() - is to list all minutes in day
+ *jack_bauer - is to list all minutes in a day
  *@:
- *Return: lastd if correct
+ *Return: no need
  */
 void jack_bauer(void)
 {
@@ -25,5 +25,4 @@ void jack_bauer(void)
 		}
 		hours++;
 	}
-	return;
 }
