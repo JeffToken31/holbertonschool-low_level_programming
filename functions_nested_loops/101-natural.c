@@ -50,9 +50,6 @@ int main(void)
 	sumof5 = nbrmul5 / 5 * (5 + nbrmul5) / 2;
 	sumof15 = nbrmul15 / 15 * (15 + nbrmul15) / 2;
 	sumall = sumof3 + sumof5 - sumof15;
-	printf("%d\n", sumof3);
-	printf("%d\n", sumof5);
-	printf("%d\n", sumof15);
 	printf("%d\n", sumall);
 	return (0);
 }
