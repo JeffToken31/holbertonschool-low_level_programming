@@ -12,17 +12,17 @@ int main(void)
 
 	a = 1;
 	b = 2;
-	c = 0;
+	c = 2;
 	printf("%ld", b);
 	for (i = 0; i < 48;)
 	{
 		c = a + b;
-		if (b % 2 == 0 && b < 4000000)
-                {
-                	sum += b;
-                }
+		if (c % 2 == 0 && c < 4000000)
+		{
+			sum += c;
+		}
 		a = b;
-                b = c;
+		b = c;
 		i++;
 	}
 	printf("%ld", sum);
