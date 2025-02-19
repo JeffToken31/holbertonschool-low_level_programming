@@ -20,6 +20,8 @@ void print_times_table(int n)
 				{
 				_putchar(result + 48);
 				}
+				else
+				{
 				_putchar(',');
 				_putchar(' ');
 				if (result < 10)
@@ -39,11 +41,9 @@ void print_times_table(int n)
 				_putchar(' ');
 				_putchar(result / 10 + 48);
 				_putchar(result % 10 + 48);
-				}
+				}}
 				multiplier++;
 			}
 			_putchar('\n');
 			table++;
-		}
-	}
-}
+		}}}
