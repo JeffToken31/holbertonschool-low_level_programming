@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- *print_sum - print sum of natural number
+ *main - print sum of natural number
  *@: no need
  *Return: no need
  */
-void print_sum(void)
+int main(void)
 {
 	int nbrmul3, nbrmul5, sumof3, sumof5, sumall, i;
 
@@ -38,4 +38,5 @@ void print_sum(void)
 	sumof5 = nbrmul5 * (5 + (nbrmul5 * 5)) / 2;
 	sumall = sumof3 + sumof5;
 	printf("%d\n", sumall);
+	return (0);
 }
