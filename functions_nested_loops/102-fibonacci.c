@@ -8,19 +8,19 @@
  */
 int main(void)
 {
-	unsigned int a, b, c, i;
+	long int a, b, c, i;
 
 	a = 1;
 	b = 2;
-	printf("%u", a);
-	printf(", %u", b);
+	printf("%ld", a);
+	printf(", %ld", b);
 	for (i = 0; i < 48;)
 	{
 		c = a + b;
 		a = b;
 		b = c;
 		i++;
-		printf(", %u", c);
+		printf(", %ld", c);
 	}
 	printf("\n");
 	return (0);
