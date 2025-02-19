@@ -9,7 +9,7 @@ void print_times_table(int n)
 {
 	int table,  multiplier, result;
 
-	if (n > 0 && n < 16)
+	if (n >= 0 && n < 16)
 	{
 		for (table = 0; table < (n + 1);)
 		{
@@ -22,25 +22,25 @@ void print_times_table(int n)
 				}
 				else
 				{
-				_putchar(',');
-				_putchar(' ');
-				if (result < 10)
-				{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(result + 48);
-				}
-				else if (result > 99)
-				{
-				_putchar(result / 100 + 48);
-				_putchar((result / 10) % 10 + 48);
-				_putchar(result % 10 + 48);
-				}
-				else
-				{
-				_putchar(' ');
-				_putchar(result / 10 + 48);
-				_putchar(result % 10 + 48);
+					_putchar(',');
+					_putchar(' ');
+					if (result < 10)
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(result + 48);
+					}
+					else if (result > 99)
+					{
+						_putchar(result / 100 + 48);
+						_putchar((result / 10) % 10 + 48);
+						_putchar(result % 10 + 48);
+					}
+					else
+					{
+						_putchar(' ');
+						_putchar(result / 10 + 48);
+						_putchar(result % 10 + 48);
 				}}
 				multiplier++;
 			}
