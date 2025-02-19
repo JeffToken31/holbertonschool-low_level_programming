@@ -8,22 +8,21 @@
  */
 int main(void)
 {
-	long int a, b, c, i, sum;
+	long int a, b, c, sum;
 
 	a = 1;
 	b = 2;
-	c = 2;
-	printf("%ld", b);
-	for (i = 0; i < 48;)
+	c = 0;
+	sum = 2;
+	while (c < 4000000)
 	{
 		c = a + b;
-		if (c % 2 == 0 && c < 4000000)
+		if (c % 2 == 0)
 		{
 			sum += c;
 		}
 		a = b;
 		b = c;
-		i++;
 	}
 	printf("%ld", sum);
 	printf("\n");
