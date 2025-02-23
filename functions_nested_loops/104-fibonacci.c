@@ -8,19 +8,35 @@
  */
 int main(void)
 {
-	unsigned long int a, b, c, i;
-	a = 1;
-	b = 2;
-	printf("%lu", a);
-	printf(", %lu", b);
-	for (i = 0; i < 92;)
+	unsigned long last_a = 1, a = 2, next_a;
+	unsigned long last_b = 0, b = 0, next_b, c;
+       	int i;
+
+	printf("%lu", last_a);
+	printf(", %lu", a);
+
+	for (i = 3; i <= 92;)
 	{
-		c = a + b;
-		a = b;
-		b = c;
+		next_a = last_a + a;
+		last_a = a;
+		a = next_a;
 		i++;
-		printf(", %lu", c);
+		printf(", %lu", next_a);
 	}
+
+	for (; i <= 100; i++)
+	{
+		c = (last_a + a) / 1000000000;
+		next_a = (last_a + a) % 1000000000;
+		next_b = last_b + b + c;
+		printf(", %lu%9lu", next_b, next_a);
+
+		last_b = b;
+		last_a = a;
+		b = next_b;
+		a = next_a;
+	}
+
 	printf("\n");
 	return (0);
 }
