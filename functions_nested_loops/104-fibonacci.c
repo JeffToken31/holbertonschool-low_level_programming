@@ -26,7 +26,7 @@ int main(void)
 		printf(", %lu", next_a);
 	}
 
-	for (; i <= 100; i++)
+	for (; i <= 98; i++)
 	{
 		c = (last_a + a) / BILLION;
 		next_a = (last_a + a) % BILLION;
