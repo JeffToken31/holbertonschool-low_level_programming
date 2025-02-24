@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  *print_most_numbers - print digit without 2 and 4
@@ -6,14 +7,15 @@
  */
 void print_most_numbers(void)
 {
-	int digit = 48;
+	int digit;
 
-	for (; digit <= 57;)
+	for (digit = 48; digit <= 57;)
 	{
-		if (digit == 59 || digit == 61)
+		if (digit == 50 || digit == 52)
 		{
 			digit++;
 		}
+
 		else
 		{
 			_putchar(digit);
