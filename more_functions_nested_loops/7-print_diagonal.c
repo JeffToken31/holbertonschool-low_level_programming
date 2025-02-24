@@ -11,11 +11,8 @@ void print_diagonal(int n)
 
 	i = 0;
 
-	if (n != 0)
+	if (n > 0)
 	{
-		if (n < 0)
-			n = -n;
-
 		while (n > 0)
 		{
 		j = i;
