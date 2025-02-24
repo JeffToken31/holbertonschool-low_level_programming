@@ -10,7 +10,7 @@ int main(void)
 {
 	int digit;
 
-	digit = 0;
+	digit = 1;
 
 	for (; digit < 101; digit++)
 	{
