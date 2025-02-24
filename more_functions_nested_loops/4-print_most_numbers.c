@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  *print_most_numbers - print digit without 2 and 4
@@ -16,9 +16,9 @@ void print_most_numbers(void)
 		}
 		else
 		{
+			_putchar(digit);
 			digit++;
-			putchar(digit);
 		}
 	}
-	putchar('\n');
+	_putchar('\n');
 }
