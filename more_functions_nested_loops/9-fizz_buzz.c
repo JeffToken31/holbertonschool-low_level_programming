@@ -14,12 +14,12 @@ int main(void)
 
 	for (; digit < 101; digit++)
 	{
-		if (digit % 3 == 0)
+		if (digit % 3 == 0 && digit % 5 != 0)
 		{
 			printf("Fizz ");
 		}
 
-		if (digit % 5 == 0)
+		if (digit % 5 == 0 && digit % 3 != 0)
 		{
 			printf("Buzz ");
 		}
