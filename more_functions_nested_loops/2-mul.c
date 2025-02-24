@@ -3,6 +3,7 @@
 /**
  *mul - is to multipli two digit
  *@a: type int
+ *@b: type int
  *Return: (a * b) if sucess
  */
 int mul(int a, int b)
