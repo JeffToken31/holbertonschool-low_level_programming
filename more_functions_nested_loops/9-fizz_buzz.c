@@ -29,9 +29,9 @@ int main(void)
 			printf("FizzBuzz");
 		}
 
-		if (digit % 3 != 0 && digit % 5 != 0)	
+		if (digit % 3 != 0 && digit % 5 != 0)
 		{
-			printf("%d",digit);
+			printf("%d", digit);
 		}
 
 		if (digit != 100)
@@ -39,6 +39,6 @@ int main(void)
 			printf(" ");
 		}
 	}
-	putchar('\n');	
+	putchar('\n');
 	return (0);
 }
