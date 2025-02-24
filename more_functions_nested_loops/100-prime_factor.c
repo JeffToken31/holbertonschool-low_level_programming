@@ -20,9 +20,9 @@ int main(void)
 		else
 		{
 			number /= divid;
-			printf("%ld", number);
 		}
 	}
+	printf("%ld\n", number);
 	putchar('\n');
 	return (0);
 }
