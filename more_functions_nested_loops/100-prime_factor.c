@@ -22,7 +22,7 @@ int main(void)
 			number /= divid;
 		}
 	}
-	printf("%ld\n", number);
+	printf("%ld", number);
 	putchar('\n');
 	return (0);
 }
