@@ -11,6 +11,7 @@ void print_array(int *a, int n)
 {
 	int last_n;
 
+	last_n = 0;
 	for (n = 0; a[n]; n++)
 		last_n = n;
 	for (n = 0; a[n];)
