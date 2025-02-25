@@ -2,17 +2,16 @@
 
 /**
  *_strlen - to modifie value of variable with pointer
- *@c: pointer type char
+ *@s: pointer type char
  *Return: 0 if success
  */
 int _strlen(char *s)
 {
-	int size;
+	int element_of_array;
 
-	size = 1;
-	for (; size <= *s;)
+	for (element_of_array = 0; s[element_of_array];)
 	{
-		size++;
+		element_of_array++;
 	}
-	return (size / 5 + 1);
+	return (element_of_array);
 }
