@@ -9,11 +9,11 @@
 int _atoi(char *s)
 {
 	int i, result, count, first, last;
-	
+
 	i = 0;
 	result = 0;
 	count = 0;
-	
+
 	for (; s[i]; i++)
 	{
 		if ((s[i] >= '0' && s[i] <= '9') && (s[i - 1] < '0' || s[i - 1] > '9'))
@@ -26,7 +26,7 @@ int _atoi(char *s)
 		result = result * 10 + ((int)s[i] - '0');
 	if (s[i] == '-')
 		count++;
-		
+
 	if (count % 2 != 0)
 		result *= -1;
 	return (result);
