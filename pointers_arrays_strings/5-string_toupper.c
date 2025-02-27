@@ -13,7 +13,8 @@ char *string_toupper(char *s)
 	i = 0;
 	while (upper[i] != '\0')
 	{
-	upper[i] = upper[i] >= 'a' && upper[i] <= 'z' ? upper[i] - 'a' + 'A' : 0;
+	if (upper[i] >= 'a' && upper[i] <= 'z')
+		upper[i] = upper[i] - 'a' + 'A';
 	i++;
 	}
 	return (upper);
