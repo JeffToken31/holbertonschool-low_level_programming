@@ -18,7 +18,7 @@ int _strcmp(char *s1, char *s2)
 
 	if (i < j)
 	{
-		return ((*s1 - i) - (*s2 - j + 1));
+		return (*s1 - *s2);
 	}
 	else if (i == j)
 	{
@@ -26,6 +26,6 @@ int _strcmp(char *s1, char *s2)
 	}
 	else
 	{
-		return ((*s1 - i + 1) - (*s2 - j));
+		return (*s1 - *s2);
 	}
 }
