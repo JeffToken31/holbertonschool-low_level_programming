@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 
-#define INT_MIN (-2147483648)
 /**
  *print_number - to print number with _putchar
  *@n: type int
@@ -12,7 +11,7 @@ void print_number(int n)
 	int i;
 	int divis = 1;
 
-	if (n == INT_MIN)
+	if (n == -2147483648)
 		n = -n / 10;
 	else if (n < 0)
 	{
@@ -31,6 +30,6 @@ void print_number(int n)
 		_putchar('0' + (n / divis) % 10);
 		divis /= 10;
 	}
-	if (n == INT_MIN)
+	if (n == -2147483648)
 		_putchar('8');
 }
