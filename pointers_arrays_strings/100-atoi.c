@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#define INT_MIN (-2147483648)
 
 /**
  **_atoi - to convert a char in int
@@ -15,11 +16,24 @@ int _atoi(char *s)
 	count = 0;
 
 	for (; s[i]; i++)
+	{
 		if (s[i] >= '0' && s[i] <= '9')
+		{
 			result = result * 10 + ((int)s[i] - '0');
+		}
 		else if (s[i] == '-')
-		count++;
-
+		{
+			count++;
+		}
+		else if (result != 0)
+		{
+			break;
+		}
+		else if (result == INT_MIN)
+		{
+			return (result);
+		}
+	}
 	if (count % 2 != 0)
 		result *= -1;
 	return (result);
