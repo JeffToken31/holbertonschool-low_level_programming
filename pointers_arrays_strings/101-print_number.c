@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- *print_number - to print all array's elements
+ *print_number - to print number with _putchar
  *@n: type int
  *Return: no needed
  */
