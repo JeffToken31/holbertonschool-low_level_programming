@@ -9,7 +9,7 @@
  */
 int _atoi(char *s)
 {
-	int i, result, count;
+	int i, result, count, overflow;
 
 	i = 0;
 	result = 0;
@@ -19,7 +19,10 @@ int _atoi(char *s)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{
+			overflow = result;
 			result = result * 10 + ((int)s[i] - '0');
+			if (result / 10 != overflow)
+				result = INT_MIN;
 		}
 		else if (s[i] == '-')
 		{
