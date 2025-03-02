@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #define INT_MIN (-2147483648)
-#define INT_MAX (-2147483647)
+#define INT_MAX (2147483647)
 
 /**
  **_atoi - to convert a char in int
