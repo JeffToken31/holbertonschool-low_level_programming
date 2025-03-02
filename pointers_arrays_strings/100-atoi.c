@@ -29,12 +29,12 @@ int _atoi(char *s)
 	{
 
 		result = result * 10 + (s[i] - '0');
-		
-		if (is_minus == 1 && result > (unsigned)INT_MAX)
+
+		if (is_minus == 1 && result > (unsigned int)INT_MAX)
 		{
 			return (INT_MAX);
 		}
-		if (is_minus == -1 && result > (unsigned)INT_MAX + 1)
+		if (is_minus == -1 && result > (unsigned int)INT_MAX + 1)
 		{
 			return (INT_MIN);
 		}
