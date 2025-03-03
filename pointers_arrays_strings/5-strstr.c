@@ -3,8 +3,8 @@
 
 /**
  **_strstr - search a string int other
- * @s: variable to set
- * @accept: char to start of
+ * @haystack: variable to set
+ * @needle: char to start of
  * Return: char *s
  */
 char *_strstr(char *haystack, char *needle)
@@ -20,10 +20,14 @@ char *_strstr(char *haystack, char *needle)
 	{
 		for (j = 0; needle[j] != '\0'; j++)
 		{
-			if (haystack[i] == needle[j] && haystack[i + 1] == needle[j + 1])
+			if (haystack[i + j] != needle[j])
 			{
-				return (haystack + i);
+				break;
 			}
+		}
+		if (needle[j] == '\0')
+		{
+			return (haystack + i);
 		}
 	}
 
