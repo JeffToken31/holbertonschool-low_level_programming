@@ -18,6 +18,6 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 	if (s[i] != c)
-		return ('\0');
+		return (NULL);
 	return (s);
 }
