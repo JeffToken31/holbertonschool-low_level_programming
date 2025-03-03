@@ -2,21 +2,28 @@
 #include <stdio.h>
 
 /**
- **_strpbrk - prints print string at start at accept
+ **_strpbrk - print string at start at accept
  * @s: variable to set
  * @accept: char to start of
- * Return: unsigned int
+ * Return: char *s
  */
 char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
 
-	for (i = 0; s[i]; i++)
+	if (s == NULL || accept == NULL)
 	{
-		for (j = 0; accept[j]; j++)
+		s = NULL;
+	}
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		s++;
+		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[i] == accept[j])
-				s = accept;
+			{
+				return (s);
+			}
 		}
 	}
 	return (s);
