@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- **leet - to capitalize first letter of word
+ **leet - to encode 1337
  *@s: pointer type char
  *Return: type char
  */
