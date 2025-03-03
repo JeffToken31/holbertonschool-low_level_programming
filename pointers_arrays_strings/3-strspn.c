@@ -10,18 +10,22 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int i = 0;
+	int j;
+	int is_same;
 
-	while (s[i] && accept[i])
+	for (; s[i] != '\0'; i++)
 	{
-		if (s[i] == '\0' || accept[i] == '\0')
+		is_same = 0;
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			return(i);
+			if (s[i] == accept[j])
+			{
+				is_same = 1;
+				break;
+			}
 		}
-		if (s[i] == accept[i])
-		{
-			return (i + 1);
-		}
-		i++;
+		if (is_same == 0)
+			break;
 	}
-	return (i + 1);
+	return (i);
 }
