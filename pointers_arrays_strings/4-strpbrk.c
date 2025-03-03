@@ -18,14 +18,15 @@ char *_strpbrk(char *s, char *accept)
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		str++;
 		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (str[i] == accept[j])
 			{
-				return (str);
+				return (str + 1);
+				break;
 			}
 		}
+		str++;
 	}
 	return (NULL);
 }
