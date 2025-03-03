@@ -10,21 +10,22 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
+	char *str = s;
 
-	if (s == NULL || accept == NULL)
+	if (str == NULL || accept == NULL)
 	{
-		s = NULL;
+		str = NULL;
 	}
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		s++;
+		str++;
 		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (s[i] == accept[j])
+			if (str[i] == accept[j])
 			{
-				return (s);
+				return (str);
 			}
 		}
 	}
-	return (s);
+	return (NULL);
 }
