@@ -10,17 +10,19 @@
  */
 int main(__attribute__((unused))int argc, char **argv)
 {
-	int cent, i = 0, nbr_cent = 0;
+	int cent, nbr_cent = 0;
 
 	if (argc < 2)
 	{	printf("Error\n");
 		return (1);
 	}
-	for (; argv[i]; i++)
+	cent = atoi(argv[1]);
+	if (cent < 0)
 	{
-		cent = atoi(argv[i]);
+		printf("0\n");
+		return (0);
 	}
-	for (; cent != 0; nbr_cent++)
+	while (cent != 0)
 	{
 		if (cent >= 25)
 		{
@@ -42,6 +44,7 @@ int main(__attribute__((unused))int argc, char **argv)
 		{
 			cent -= 1;
 		}
+		nbr_cent++;
 	}
 	printf("%d\n", nbr_cent);
 	return (0);
