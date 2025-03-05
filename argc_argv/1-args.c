@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *main - return is name
+ *main - print numbers arguments
  *@argc: argument counter type int
  *@argv: strings who's contain arguments
  *Return: void
