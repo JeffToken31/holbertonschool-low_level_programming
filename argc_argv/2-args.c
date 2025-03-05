@@ -8,7 +8,7 @@
  */
 int main(__attribute__((unused))int argc, char **argv)
 {
-	int i = 1;
+	int i = 0;
 
 	while (argv[i])
 	{
