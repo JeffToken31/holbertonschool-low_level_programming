@@ -64,4 +64,5 @@ int is_prime_number(int n);
 int is_prime(int n, int x);
 int is_palindrome(char *s);
 int checker(char *s, int j);
+int _strlen_r(char *s);
 #endif

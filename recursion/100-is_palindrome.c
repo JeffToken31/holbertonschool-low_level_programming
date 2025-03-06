@@ -10,7 +10,7 @@
 
 int is_palindrome(char *s)
 {
-	int j = _strlen(s);
+	int j = _strlen_r(s);
 
 	if (j <= 1)
 		return (1);
@@ -35,4 +35,22 @@ int checker(char *s, int j)
 		return (0);
 	}
 	return (checker(s + 1, j - 2));
+}
+
+/**
+ *_strlen_r - function strlen with recursion
+ *@s : char counted
+ *Return: lenght of s
+ */
+
+int _strlen_r(char *s)
+{
+	int i = 1;
+
+	if (*s)
+	{
+		i = i + _strlen_r(s + 1);
+		return (i++);
+	}
+	return (0);
 }
