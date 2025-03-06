@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- *wildcmp - to check if char is palindrome
+ *wildcmp - to check relation between elements of char
  *@s1: char to check
  *@s2: char to compare
- *Return: 0 if sucess
+ *Return: 1 if true
  */
 
 int wildcmp(char *s1, char *s2)
