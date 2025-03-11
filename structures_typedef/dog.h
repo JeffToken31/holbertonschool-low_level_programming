@@ -16,6 +16,7 @@ typedef struct dog
 	float age;
 	char *owner;
 } dog_t;
+
 /*
 *init_dog - to update a struct
 */
@@ -26,4 +27,9 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
  *@d : struct to print data
  */
 void print_dog(struct dog *d);
+
+ /**
+  * dog_t *new_dog -to create a new dog
+  */
+dog_t *new_dog(char *name, float age, char *owner);
 #endif
