@@ -12,12 +12,16 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d == NULL)
-		exit(-1);
-	if (name == NULL || owner == NULL)
-		exit(-1);
-
-	d->name = name;
-	d->owner = owner;
-	d->age = age;
+	if (d != NULL)
+	{
+		if (name != NULL)
+		{
+			d->name = name;
+		}
+		if (owner != NULL)
+		{
+			d->owner = owner;
+		}
+		d->age = age;
+	}
 }
