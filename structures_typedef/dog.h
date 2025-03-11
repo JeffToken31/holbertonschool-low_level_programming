@@ -10,12 +10,12 @@
  * Description: to reference dogs
  */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} dog_t;
 /*
 *init_dog - to update a struct
 */
