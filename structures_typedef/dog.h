@@ -20,4 +20,10 @@ struct dog
 *init_dog - to update a struct
 */
 void init_dog(struct dog *d, char *name, float age, char *owner);
+
+/**
+ *print_dog - to print data of struct
+ *@d : struct to print data
+ */
+void print_dog(struct dog *d);
 #endif
