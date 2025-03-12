@@ -3,7 +3,7 @@
 #include "dog.h"
 
 /**
- *free_dog - to free memory allocate dynamicly
+ *free_dog - To free dynamically allocated memory 
  *@d : struct to free data
  *Return: just free data of strut
  */
