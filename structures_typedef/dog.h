@@ -32,4 +32,11 @@ void print_dog(struct dog *d);
   * dog_t *new_dog -to create a new dog
   */
 dog_t *new_dog(char *name, float age, char *owner);
+
+/**
+ *free_dog - to free memory allocate dynamicly
+ *d : struct to free data
+ *Return: just free data of strut
+ */
+void free_dog(dog_t *d);
 #endif
