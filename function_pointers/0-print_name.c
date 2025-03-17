@@ -4,7 +4,7 @@
 /**
  *print_name - print name
  *@name : pointer char *
- **f: call pointer function
+ *@f: call pointer function
  *return: just call print function
  */
 
