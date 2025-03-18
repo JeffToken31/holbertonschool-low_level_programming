@@ -22,7 +22,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		copy = va_arg(string, char *);
 
 		if (copy == NULL)
-			copy = "nil";
+			copy = "(nil)";
 		if (i == n - 1)
 			printf("%s", copy);
 		else
