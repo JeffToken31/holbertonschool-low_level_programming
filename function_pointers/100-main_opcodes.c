@@ -24,15 +24,14 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(2);
 	}
-	char *keep_main = ((char *) main);
+	char *keep_main = (char *) main;
 
 	for (i = 0; i < n_bytes; i++)
 	{
 		if (i < n_bytes - 1)
-			printf("%02x ", keep_main[i]);
+			printf("%02hhx ", keep_main[i]);
 		else
-			printf("%02x\n", keep_main[i]);
+			printf("%02hhx\n", keep_main[i]);
 	}
-	keep_main[i++] = '\0';
 	return (0);
 }
