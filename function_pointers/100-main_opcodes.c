@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {
-	int n_bytes, i;
+	int n_bytes = 0, i;
 
 	if (argc != 2)
 	{
@@ -26,7 +26,6 @@ int main(int argc, char **argv)
 	}
 	char *keep_main = ((char *) main);
 
-
 	for (i = 0; i < n_bytes; i++)
 	{
 		if (i < n_bytes - 1)
@@ -34,5 +33,6 @@ int main(int argc, char **argv)
 		else
 			printf("%02x\n", keep_main[i]);
 	}
+	keep_main[i++] = '\0';
 	return (0);
 }
