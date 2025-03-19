@@ -26,6 +26,9 @@ int main(int argc, char **argv)
 	}
 	unsigned char *keep_main = ((unsigned char *) main);
 
+	if (n_bytes > 30)
+		n_bytes = 30;
+
 	for (i = 0; i < n_bytes; i++)
 	{
 		printf("%02x ", keep_main[i]);
