@@ -5,10 +5,10 @@
  *main - print is own opcode in hexadecimal
  *@argc: argument counter
  *@argv: arguments to keep
- *Return: just print
+ *Return: 0 if succes
 */
 
-void main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int n_bytes, i;
 
@@ -24,11 +24,12 @@ void main(int argc, char **argv)
 		printf("Error\n");
 		exit(2);
 	}
-	char *keep_main = ((char *) main);
+	unsigned char *keep_main = ((unsigned char *) main);
 
 	for (i = 0; i < n_bytes; i++)
 	{
 		printf("%02x ", keep_main[i]);
 	}
 	printf("\n");
+	return (0);
 }
