@@ -1,5 +1,5 @@
 section	.data			;section data qui enregistre les variable
-hello db "Hello World", 0xA	;nom_variable Define Byte 0xA= saut de ligne ascii
+hello db "Hello, World", 0xA	;nom_variable Define Byte 0xA= saut de ligne ascii
 lenght equ $ - hello		;l'assembleur reconné equ et attribut la valeur 
 
 section	.text			;section pour inscrire les intructions
