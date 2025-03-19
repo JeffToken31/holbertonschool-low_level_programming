@@ -13,5 +13,5 @@ _start:				;equivalent du main en C
 	syscall			;appel kernel pour execter sys_write
 
 	mov rax, 60		;60 = sys_exit(retour eventuel)
-	mov rdi, 0		;pour que exit me retourne 0
+	xor rdi, rdi		;pour que exit me retourne 0
 	syscall			;lancement de l'instruction
