@@ -26,8 +26,8 @@ int main(int argc, char **argv)
 	}
 	unsigned char *keep_main = ((unsigned char *) main);
 
-	if (n_bytes > 30)
-		n_bytes = 30;
+	if (n_bytes > 21)
+		n_bytes = 21;
 
 	for (i = 0; i < n_bytes; i++)
 	{
