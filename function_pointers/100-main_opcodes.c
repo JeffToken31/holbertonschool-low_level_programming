@@ -24,10 +24,8 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(2);
 	}
-	unsigned char *keep_main = ((unsigned char *) main);
+	char *keep_main = ((char *) main);
 
-	if (n_bytes > 21)
-		n_bytes = 21;
 
 	for (i = 0; i < n_bytes; i++)
 	{
