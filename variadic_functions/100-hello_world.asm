@@ -3,9 +3,9 @@ hello db "Hello, World", 0xA	;nom_variable Define Byte 0xA= saut de ligne ascii
 lenght equ $ - hello		;l'assembleur reconné equ et attribut la valeur 
 
 section	.text			;section pour inscrire les intructions
-	global _start		;doit etre déclarer pour le linker
+	global main		;doit etre déclarer pour le linker
 
-_start:				;equivalent du main en C
+main:				;equivalent du main en C
 	mov rax, 1		;appel de la fonction voulu 1= sys_write(1,hello,lenght)
 	mov rdi, 1		;parametre 1=sdtout
 	mov rsi, hello		;le message a affiché
