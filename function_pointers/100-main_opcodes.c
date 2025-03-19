@@ -31,9 +31,9 @@ int main(int argc, char **argv)
 	{
 		printf("%02x", keep_main[i]);
 		if (i < n_bytes - 1)
-			printf(" ");
+			printf("%02x ", keep_main[i]);
 		else
-			printf("\n");
+			printf("%02x\n", keep_main[i]);
 	}
 	return (0);
 }
