@@ -1,5 +1,5 @@
 # holbertonschool-low_level_programming
-##Discovering low-level programming with learning C language
+## Discovering low-level programming with learning C language
 
 ### [hello_world](https://github.com/JeffToken31/holbertonschool-low_level_programming/tree/main/hello_world)
 First step in C.
