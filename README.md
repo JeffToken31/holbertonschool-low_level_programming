@@ -13,7 +13,7 @@ Exercices with functions and nested loops.
 ### [more_functions_nested_loops](https://github.com/JeffToken31/holbertonschool-low_level_programming/tree/main/more_functions_nested_loops)
 Deeper exploration of functions and nested loops.
 
-### [pointers_arrays_strings](https://github.com/JeffToken31/holbertonschool-low_lev    el_programming/tree/main/pointers_arrays_strings)
+### [pointers_arrays_strings](https://github.com/JeffToken31/holbertonschool-low_level_programming/tree/main/pointers_arrays_strings)
 Concept in pointers and strings manipulation
 
 ### [more_pointers_arrays_strings](https://github.com/JeffToken31/holbertonschool-low_level_programming/tree/main/more_pointers_arrays_strings)
