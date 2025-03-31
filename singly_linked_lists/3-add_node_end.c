@@ -3,32 +3,38 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *add_node - to add node in the head of list
+ *add_node_end - to add node in the tail of list
  *@head: pointer of first node
  *@str: string to inser in list
  *Return: a new list
  */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *element;
-	unsigned int size, i = 0;
+	list_t *tmp;
+	unsigned int size = 0;
 
 	element = malloc(sizeof(list_t));
 	if (element == NULL)
 		return (NULL);
 
 	element->str = strdup(str);
-
-	while (str[i])
+	while(*str)
 	{
 		size++;
-		i++;
+		str++;
 	}
-	i = 0;
 	element->len = size;
-	element->next = *head;
+	
+	tmp = *head;
 
-	*head = element;
+	if (*head == NULL)
+		*head = element;
+
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+
+	tmp->next = element;
 	return (element);
 }
