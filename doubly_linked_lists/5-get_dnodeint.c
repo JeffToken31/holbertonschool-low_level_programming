@@ -3,15 +3,15 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *add_dnodeint - to add node in the head of list
+ *get_dnodeint_at_index - to throw the list easily
  *@head: pointer of first node
- *@n: integer to inser in list
- *Return: a new list
+ *@index: index to keep node
+ *Return: a node
  */
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	unsigned i = 0;
+	unsigned int i = 0;
 
 	if (head == NULL)
 		return (NULL);
