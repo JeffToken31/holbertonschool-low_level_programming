@@ -27,12 +27,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		element->next = NULL;
 		element->prev = NULL;
+		*h = element;
 		return (element);
 	}
 	if (idx == 0)	/*insertion at begin*/
 	{
 		element->next = *h;
 		element->prev = NULL;
+		(*h)->prev = element;
 		*h = element;
 		return (element);
 	}
