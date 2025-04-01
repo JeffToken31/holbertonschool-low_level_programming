@@ -12,17 +12,13 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *element;
-	dlistint_t *tmp;
+	dlistint_t *element, *tmp = *h;
 	unsigned int i;
 
 	element = malloc(sizeof(dlistint_t));
 	if (element == NULL)
 		return (NULL);
-
 	element->n = n;
-	tmp = *h;
-
 	if (*h == NULL)	/*if list is empty*/
 	{
 		element->next = NULL;
