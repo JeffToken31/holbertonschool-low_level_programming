@@ -39,9 +39,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (element);
 	}
 	for (i = 0; i < idx - 1; i++)	/*deplace tmp at index*/
+	{
 		tmp = tmp->next;
-	if (tmp == NULL) /*if index over limit of list*/
-		return (NULL);
+		if (tmp == NULL) /*if index over limit of list*/
+			return (NULL);
+	}
 	if (tmp->next == NULL) /*insertion at end*/
 	{
 		tmp->next = element;
