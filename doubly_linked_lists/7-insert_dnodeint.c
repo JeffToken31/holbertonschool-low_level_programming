@@ -23,23 +23,24 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	element->n = n;
 	tmp = *h;
 
-	if (*h == NULL)
-		return (*h);
-
-	if (idx == 0)
+	if (*h == NULL)	/*if list is empty*/
+	{
+		element->next = NULL;
+		element->prev = NULL;
+		return (element);
+	}
+	if (idx == 0)	/*insertion at begin*/
 	{
 		element->next = *h;
 		element->prev = NULL;
 		*h = element;
 		return (element);
 	}
-	for (i = 0; i < idx - 1; i++)
-	{
-		if (tmp->next == NULL && idx > i)
-			return (NULL);
+	for (i = 0; i < idx - 1; i++)	/*deplace tmp at index*/
 		tmp = tmp->next;
-	}
-	if (tmp->next == NULL)
+	if (tmp == NULL) /*if index over limit of list*/
+		return (NULL);
+	if (tmp->next == NULL) /*insertion at end*/
 	{
 		tmp->next = element;
 		element->next = NULL;
@@ -48,8 +49,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	element->next = tmp->next;
 	element->prev = tmp;
-	if (tmp->next != NULL)
-		tmp->next->prev = element;
+	tmp->next->prev = element;
 	tmp->next = element;
 	return (element);
 }
