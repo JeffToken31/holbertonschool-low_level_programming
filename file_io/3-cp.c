@@ -42,15 +42,15 @@ int main(int argc, char **argv)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", buffer);
 			close(ffrom);
 			close(fto);
-			exit(99);
+			exit(98);
 		}
 	}
 	if (byte_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from fil    e %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		close(ffrom);
 		close(fto);
-		exit(99);
+		exit(98);
 	}
 	if (close(fto) < 0)
 	{
