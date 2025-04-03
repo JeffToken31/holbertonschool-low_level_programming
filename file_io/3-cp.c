@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 		byte_write = write(fto, buffer, byte_read);
 		if (byte_write == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", buffer);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(ffrom);
 			close(fto);
 			exit(99);
@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 	}
 	if (byte_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", ffrom);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		close(ffrom);
 		close(fto);
 		exit(98);
