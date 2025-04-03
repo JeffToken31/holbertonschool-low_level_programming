@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	ffrom = open(argv[1], O_RDONLY, 0600);
+	ffrom = open(argv[1], O_RDONLY);
 	if (ffrom == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -32,6 +32,7 @@ int main(int argc, char **argv)
 	if (fto == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		close(ffrom);
 		exit(99);
 	}
 	while ((byte_read = read(ffrom, buffer, sizeof(buffer))) > 0)
@@ -54,12 +55,12 @@ int main(int argc, char **argv)
 	}
 	if (close(fto) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fto %d\n", close(fto));
+		dprintf(STDERR_FILENO, "Error: Can't close fto %d\n", fto);
 		exit(100);
 	}
 	if (close(ffrom) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close ffrom %d\n", close(ffrom));
+		dprintf(STDERR_FILENO, "Error: Can't close ffrom %d\n", ffrom;
 		exit(100);
 	}
 	return (0);
