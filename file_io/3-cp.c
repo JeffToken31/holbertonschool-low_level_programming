@@ -45,7 +45,13 @@ int main(int argc, char **argv)
 			exit(99);
 		}
 	}
-	
+	if (byte_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", ffrom);
+		close(ffrom);
+		close(fto);
+		exit(98);
+	}
 	if (close(fto) < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fto %d\n", close(fto));
