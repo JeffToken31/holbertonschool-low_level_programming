@@ -13,10 +13,9 @@
 
 int main(int argc, char **argv)
 {
-	int ffrom, fto, byte_read, byte_write;
+	int ffrom, fto;
 	char buffer[1024];
-	size_t size;
-
+	ssize_t byte_read, byte_write;
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -35,15 +34,23 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	size = sizeof(buffer);
-	while ((byte_read = read(ffrom, buffer, size)) > 0)
+	while ((byte_read = read(ffrom, buffer, sizeof(buffer))) > 0)
 	{
-		byte_write = write(fto, buffer, size);
+		byte_write = write(fto, buffer, byte_read);
 		if (byte_write == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", buffer);
+			close(ffrom);
+			close(fto);
 			exit(99);
 		}
+	}
+	if (byte_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from fil    e %s\n", argv[1]);
+		close(ffrom);
+		close(fto);
+		exit(98);
 	}
 	if (close(fto) < 0)
 	{
