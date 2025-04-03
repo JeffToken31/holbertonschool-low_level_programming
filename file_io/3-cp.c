@@ -16,13 +16,13 @@ int main(int argc, char **argv)
 	int ffrom, fto;
 	char buffer[1024];
 	ssize_t byte_read, byte_write;
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	ffrom = open(argv[1], O_RDONLY);
-
 	fto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while ((byte_read = read(ffrom, buffer, sizeof(buffer))) > 0)
 	{
