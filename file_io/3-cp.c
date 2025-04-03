@@ -50,7 +50,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from fil    e %s\n", argv[1]);
 		close(ffrom);
 		close(fto);
-		exit(98);
+		exit(99);
 	}
 	if (close(fto) < 0)
 	{
