@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	ffrom = open(argv[1], O_RDONLY);
+	ffrom = open(argv[1], O_RDONLY, 0600);
 	if (ffrom == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
