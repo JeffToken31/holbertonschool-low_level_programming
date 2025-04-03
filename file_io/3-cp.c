@@ -60,7 +60,7 @@ int main(int argc, char **argv)
 	}
 	if (close(ffrom) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close ffrom %d\n", ffrom;
+		dprintf(STDERR_FILENO, "Error: Can't close ffrom %d\n", ffrom);
 		exit(100);
 	}
 	return (0);
